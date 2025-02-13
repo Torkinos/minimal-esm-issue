@@ -1,0 +1,16 @@
+341
+{"version":0,"id":"bd5f684151e1ab9f0086b946ba065bc2c0b87e8b55a596f2f864d478b0ab6372","main":"/src/main.js","imports":{},"resolutions":{"/package.json":{},"/src/main.js":{"#package":"/package.json"}},"addons":[],"assets":[],"files":{"/package.json":{"offset":0,"length":236,"mode":420},"/src/main.js":{"offset":236,"length":37,"mode":420}}}
+{
+  "name": "minimal-esm-issue",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "bundle": "bare-pack -p ios --linked --out src/ios.bundle src/main.js"
+  },
+  "devDependencies": {
+    "bare-pack": "^1.2.4"
+  }
+}
+export { foo } from './foo.js';
+
+

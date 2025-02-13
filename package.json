@@ -1,0 +1,11 @@
+{
+  "name": "minimal-esm-issue",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "bundle": "bare-pack -p ios --linked --out src/ios.bundle src/main.js"
+  },
+  "devDependencies": {
+    "bare-pack": "^1.2.4"
+  }
+}
