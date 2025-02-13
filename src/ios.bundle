@@ -1,16 +1,21 @@
-341
-{"version":0,"id":"67ea9f5fc314217e6f176f74a39a3d02bc4d301d43af966f5bd12ee8bdc41648","main":"/src/main.js","imports":{},"resolutions":{"/package.json":{},"/src/main.js":{"#package":"/package.json"}},"addons":[],"assets":[],"files":{"/package.json":{"offset":0,"length":236,"mode":420},"/src/main.js":{"offset":236,"length":70,"mode":420}}}
+468
+{"version":0,"id":"6c0a03b165a1ed9a01f7c294a5e538445d1038a4412705c6ea00dec02edb75c4","main":"/src/index.js","imports":{},"resolutions":{"/package.json":{},"/src/index.js":{"#package":"/package.json","./main.js":"/src/main.js"},"/src/main.js":{"#package":"/package.json"}},"addons":[],"assets":[],"files":{"/package.json":{"offset":0,"length":237,"mode":420},"/src/index.js":{"offset":237,"length":83,"mode":420},"/src/main.js":{"offset":320,"length":70,"mode":420}}}
 {
   "name": "minimal-esm-issue",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "bundle": "bare-pack -p ios --linked --out src/ios.bundle src/main.js"
+    "bundle": "bare-pack -p ios --linked --out src/ios.bundle src/index.js"
   },
   "devDependencies": {
     "bare-pack": "^1.2.4"
   }
 }
+import {foo, bar} from './main.js';
+
+console.log(foo());
+console.log(bar());
+
 export { foo } from './foo.js';
 export { bar } from './bar.js';
 
